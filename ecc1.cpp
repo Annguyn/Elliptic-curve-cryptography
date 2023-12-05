@@ -71,7 +71,6 @@ Point add(Point P, Point Q, int a, int p)
         }
     }
 
-    // Calculate R.x and R.y
     R.x = mod(m * m - P.x - Q.x, p);
     R.y = mod(m * (P.x - R.x) - P.y, p);
 
@@ -238,8 +237,7 @@ void Encode(string plaintext, Point basepoint, int n, int a, int p, int k,int m)
     int arr[size];
     Point encodedPoint[size];
     cout << endl;
-      std::string mahoa_truocshift = "";  // Initialize an empty string to store the encoded points before the shift
-
+      std::string mahoa_truocshift = "";  
     cout << "Ma hoa: " << endl;
     for (size_t i = 0; i < size; i++)
     {
@@ -411,8 +409,8 @@ std::string Decode(const std::string &ciphertext, Point basepoint, int k, int n,
 int main()
 {
     int n = 150;
-    int a = 2;
-    int p = 163;
+    int a = 3;
+    int p = 199;
     int m = decimalToBase3(n).size();
     Point basepoint = {1, 7};
     vector<char> pointToCharTable(n + 1, ' '); 
