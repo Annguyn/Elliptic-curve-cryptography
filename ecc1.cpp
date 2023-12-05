@@ -3,7 +3,7 @@
 #include <cmath>
 #include <iomanip>
 #include <limits>
-
+#include<algorithm>
 using namespace std;
 
 struct Point
@@ -496,6 +496,7 @@ for (size_t j = 0; j < plaintext.size(); j++) {
     string ciphertext;
     cout << "Nhap ban ma hoa" << endl;
     getline(cin, ciphertext);
+     ciphertext.erase(std::remove(ciphertext.begin(), ciphertext.end(), ' '), ciphertext.end());
     // ciphertext = shift_left(ciphertext, m);
     // cout << "Shift left" << endl;
     // cout << ciphertext << endl;
